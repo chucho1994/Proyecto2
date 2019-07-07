@@ -11,42 +11,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "OnCreate", Toast.LENGTH_SHORT).show();
-        // La actividad está creada.
-    }
+
+      //  vamos a hacer un BrekPoint con un sensillo ejemplo sacando el promedio de calificiones
+         //y aprenderemos a debuggear
+        int matematicas = 5; //break point
+        int física= 5;
+       int español=5;
+        int promedio = 0;
+
+        promedio = (matematicas +física +español) / 3;
+
+        if (promedio>= 6) {
+
+            Toast.makeText(this, "Aprovado", Toast.LENGTH_SHORT).show();
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, "OnStart", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de hacerse visible.
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "OnResume", Toast.LENGTH_SHORT).show();
-        // La actividad se ha vuelto visible (ahora se "reanuda").
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, "OnPause", Toast.LENGTH_SHORT).show();
-        // Enfocarse en otra actividad  (esta actividad está a punto de ser "detenida").
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, "OnStop", Toast.LENGTH_SHORT).show();
-        // La actividad ya no es visible (ahora está "detenida")
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, "OnDestroy", Toast.LENGTH_SHORT).show();
-        // La actividad está a punto de ser destruida.
-    }
+        } else if (promedio <= 5) {
+
+            Toast.makeText(this, "Rebrobado", Toast.LENGTH_SHORT).show();
+            //En pocas palabras deguggear en ejemplificar el codigo paso  a paso de la mano
+            //verificandolas con los metodos o variables que se van ponniendo alado 
 
 
+        }
+
+
+    }
 
 }
