@@ -3,7 +3,8 @@ package com.example.myproyecto2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Toast;
+import android.widget.Toast;//libreria para utilizar clase toast-
+ //         /\se pone automaticamente cuando se agrega la clase si no lo poneemos manual
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,10 +12,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+     //Ejemplo sin proposito:
 
-      //  vamos a hacer un BrekPoint con un sensillo ejemplo sacando el promedio de calificiones
-         //y aprenderemos a debuggear
-        int matematicas = 5; //break point
+        int matematicas = 5;
         int física= 5;
        int español=5;
         int promedio = 0;
@@ -24,15 +24,14 @@ public class MainActivity extends AppCompatActivity {
         if (promedio>= 6) {
 
             Toast.makeText(this, "Aprovado", Toast.LENGTH_SHORT).show();
-
+            //metodo para mostarar textos, imagenes, videos ect dependiendo de como lo
+            //configuremos
 
         } else if (promedio <= 5) {
-
+                                                          //       \/metodo para dar cuatno tiempo sea visible
             Toast.makeText(this, "Rebrobado", Toast.LENGTH_SHORT).show();
-            //En pocas palabras deguggear en ejemplificar el codigo paso  a paso de la mano
-            //verificandolas con los metodos o variables que se van ponniendo alado 
-
-
+                                          // /\Texto que aparecera en la pantalla /\Eeste metodo nos
+            //hace visible que nuestor mensaje se muestre en la pantalla del dispositivo
         }
 
 
